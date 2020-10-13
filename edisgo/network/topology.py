@@ -478,10 +478,7 @@ class Topology:
             grids.
 
         """
-        if hasattr(self, '_charging_points_df'):
-            return self._charging_points_df
-        else:
-            return pd.DataFrame(columns=['bus', 'p_nom', 'use_case', 'polygon'])
+        return self._charging_points_df
 
     @charging_points_df.setter
     def charging_points_df(self, charging_points_df):
